@@ -1,0 +1,280 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawMedik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .logo-font {
+            font-family: 'Great Vibes', cursive;
+            color: gold;
+        }
+    </style>
+</head>
+<body class="bg-yellow-100">
+    <header class="bg-emerald-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl logo-font">PawMedik</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4 bg-white shadow-md rounded-lg">
+        <h2 class="text-xl font-bold mb-4 text-center">Identifikasi Penyakit Kucing Anda</h2>
+        <form id="questionnaire" class="space-y-4">
+            <div>
+                <label class="block text-gray-700">1. Apakah kucing Anda mengalami muntah?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="muntah" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="muntah" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700">2. Apakah kucing Anda mengalami diare?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="diare" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="diare" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700">3. Apakah kucing Anda lesu?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="lesu" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="lesu" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700">4. Apakah kucing Anda kehilangan nafsu makan?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="nafsu_makan" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="nafsu_makan" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700">5. Apakah kucing Anda mengalami batuk atau bersin?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="batuk" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="batuk" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700">6. Apakah kucing Anda mengalami penurunan berat badan?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="berat_badan" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="berat_badan" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700">7. Apakah kucing Anda mengalami masalah kulit seperti gatal atau bersisik?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="kulit" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="kulit" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700">8. Apakah kucing Anda mengalami masalah gigi atau gusi seperti bau mulut atau gusi bengkak?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="gigi_gusi" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="gigi_gusi" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700">9. Apakah kucing Anda mengalami demam atau suhu tubuh tinggi?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="demam" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="demam" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700">10. Apakah kucing Anda mengalami masalah buang air kecil seperti sering atau sulit buang air kecil?</label>
+                <div class="mt-2">
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="buang_air_kecil" value="ya">
+                        <span class="ml-2">Ya</span>
+                    </label>
+                    <label class="inline-flex items-center ml-6">
+                        <input type="radio" class="form-radio" name="buang_air_kecil" value="tidak">
+                        <span class="ml-2">Tidak</span>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Kirim</button>
+        </form>
+
+        <div id="result" class="mt-8 p-4 bg-gray-100 rounded hidden">
+            <h3 class="text-lg font-bold">Kemungkinan Penyakit:</h3>
+            <p id="disease" class="mt-2 text-gray-700"></p>
+            <h3 class="text-lg font-bold mt-4">Solusi:</h3>
+            <p id="solution" class="mt-2 text-gray-700"></p>
+            <h3 class="text-lg font-bold mt-4">Pencegahan:</h3>
+            <p id="prevention" class="mt-2 text-gray-700"></p>
+        </div>
+    </main>
+
+    <footer class="bg-emerald-600 text-gold p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>© 2024 PawMedik. Hak cipta dilindungi undang-undang.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('questionnaire').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const symptoms = {
+                muntah: formData.get('muntah'),
+                diare: formData.get('diare'),
+                lesu: formData.get('lesu'),
+                nafsu_makan: formData.get('nafsu_makan'),
+                batuk: formData.get('batuk'),
+                berat_badan: formData.get('berat_badan'),
+                kulit: formData.get('kulit'),
+                gigi_gusi: formData.get('gigi_gusi'),
+                demam: formData.get('demam'),
+                buang_air_kecil: formData.get('buang_air_kecil')
+            };
+
+            let disease = '';
+            let solution = '';
+            let prevention = '';
+            
+            if (symptoms.muntah === 'ya' && symptoms.diare === 'ya') {
+                disease = 'Gastroenteritis';
+                solution = 'Pastikan kucing Anda tetap terhidrasi. Berikan makanan yang mudah dicerna dan hindari makanan yang dapat memperburuk kondisi. Jika gejala berlanjut, segera bawa ke dokter hewan.';
+                prevention = 'Jaga kebersihan makanan dan minuman kucing Anda. Hindari memberikan makanan yang tidak sesuai.';
+            } else if (symptoms.lesu === 'ya' && symptoms.nafsu_makan === 'tidak') {
+                disease = 'Virus Leukemia Kucing (FeLV)';
+                solution = 'Segera bawa kucing Anda ke dokter hewan untuk pemeriksaan lebih lanjut dan pengobatan yang tepat. Pastikan kucing Anda mendapatkan vaksinasi yang diperlukan.';
+                prevention = 'Vaksinasi rutin dan hindari kontak dengan kucing yang terinfeksi.';
+            } else if (symptoms.batuk === 'ya') {
+                disease = 'Infeksi Saluran Pernapasan Atas';
+                solution = 'Jaga kucing Anda tetap hangat dan nyaman. Berikan makanan yang bergizi dan pastikan kucing Anda tetap terhidrasi. Jika gejala berlanjut, segera bawa ke dokter hewan.';
+                prevention = 'Vaksinasi rutin dan jaga kebersihan lingkungan.';
+            } else if (symptoms.muntah === 'ya' && symptoms.lesu === 'ya') {
+                disease = 'Keracunan';
+                solution = 'Segera bawa kucing Anda ke dokter hewan. Jangan mencoba memberikan makanan atau minuman sebelum mendapatkan saran dari dokter hewan.';
+                prevention = 'Jauhkan bahan beracun dari jangkauan kucing dan awasi kucing saat bermain di luar.';
+            } else if (symptoms.diare === 'ya' && symptoms.nafsu_makan === 'tidak') {
+                disease = 'Infeksi Parasit';
+                solution = 'Bawa kucing Anda ke dokter hewan untuk pemeriksaan tinja dan pengobatan antiparasit. Pastikan kucing Anda tetap terhidrasi.';
+                prevention = 'Obat cacing rutin setiap 3 bulan dan jaga kebersihan tempat makan dan litter box.';
+            } else if (symptoms.lesu === 'ya' && symptoms.batuk === 'ya') {
+                disease = 'Asma Kucing';
+                solution = 'Bawa kucing Anda ke dokter hewan untuk pemeriksaan lebih lanjut. Dokter hewan mungkin akan meresepkan obat untuk mengontrol gejala asma.';
+                prevention = 'Hindari paparan asap rokok, debu, dan bahan kimia yang dapat memicu asma.';
+            } else if (symptoms.batuk === 'ya' && symptoms.nafsu_makan === 'tidak') {
+                disease = 'Flu Kucing (Feline Upper Respiratory Infection)';
+                solution = 'Bersihkan mata dan hidung dengan kain lembut yang dibasahi air hangat. Berikan makanan beraroma kuat untuk mendorong nafsu makan. Jika infeksi parah, bawa ke dokter hewan untuk antibiotik atau antiviral.';
+                prevention = 'Vaksinasi rutin dan jaga kebersihan lingkungan.';
+            } else if (symptoms.diare === 'ya' && symptoms.muntah === 'ya') {
+                disease = 'Feline Panleukopenia (FPV)';
+                solution = 'Penanganan intensif di dokter hewan, termasuk cairan infus dan obat antiviral. Isolasi kucing yang terinfeksi.';
+                prevention = 'Vaksinasi FPV dan jaga kebersihan lingkungan.';
+            } else if (symptoms.nafsu_makan === 'tidak' && symptoms.lesu === 'ya') {
+                disease = 'Penyakit Ginjal (Chronic Kidney Disease)';
+                solution = 'Diet rendah fosfor dan protein. Berikan obat atau cairan infus jika disarankan oleh dokter hewan.';
+                prevention = 'Berikan makanan berkualitas tinggi dan cukup air. Lakukan pemeriksaan rutin pada kucing dewasa.';
+            } else if (symptoms.diare === 'ya' && symptoms.lesu === 'ya') {
+                disease = 'Cacingan';
+                solution = 'Berikan obat cacing sesuai dosis dari dokter hewan. Pastikan kucing tidak berburu hewan liar atau makan makanan mentah.';
+                prevention = 'Obat cacing rutin setiap 3 bulan. Jaga kebersihan tempat makan dan litter box.';
+            } else if (symptoms.lesu === 'ya' && symptoms.muntah === 'ya') {
+                disease = 'Jamur Kulit (Ringworm)';
+                solution = 'Gunakan salep antijamur atau obat oral sesuai rekomendasi dokter hewan. Pisahkan kucing yang terinfeksi untuk mencegah penularan.';
+                prevention = 'Jaga kebersihan lingkungan dan alat-alat grooming. Hindari kontak dengan hewan yang terinfeksi.';
+            } else if (symptoms.nafsu_makan === 'tidak' && symptoms.batuk === 'ya') {
+                disease = 'Gigi dan Gusi Bermasalah (Periodontal Disease)';
+                solution = 'Membersihkan gigi kucing secara rutin dengan pasta gigi khusus. Scaling di dokter hewan jika sudah parah.';
+                prevention = 'Berikan makanan kering atau dental treats untuk membantu membersihkan gigi. Periksa kondisi mulut secara berkala.';
+            } else if (symptoms.berat_badan === 'ya' && symptoms.nafsu_makan === 'tidak') {
+                disease = 'Cacingan';
+                solution = 'Berikan obat cacing sesuai dosis dari dokter hewan. Pastikan kucing tidak berburu hewan liar atau makan makanan mentah.';
+                prevention = 'Obat cacing rutin setiap 3 bulan. Jaga kebersihan tempat makan dan litter box.';
+            } else if (symptoms.kulit === 'ya' && symptoms.lesu === 'ya') {
+                disease = 'Jamur Kulit (Ringworm)';
+                solution = 'Gunakan salep antijamur atau obat oral sesuai rekomendasi dokter hewan. Pisahkan kucing yang terinfeksi untuk mencegah penularan.';
+                prevention = 'Jaga kebersihan lingkungan dan alat-alat grooming. Hindari kontak dengan hewan yang terinfeksi.';
+            } else if (symptoms.gigi_gusi === 'ya' && symptoms.nafsu_makan === 'tidak') {
+                disease = 'Gigi dan Gusi Bermasalah (Periodontal Disease)';
+                solution = 'Membersihkan gigi kucing secara rutin dengan pasta gigi khusus. Scaling di dokter hewan jika sudah parah.';
+                prevention = 'Berikan makanan kering atau dental treats untuk membantu membersihkan gigi. Periksa kondisi mulut secara berkala.';
+            } else if (symptoms.demam === 'ya' && symptoms.lesu === 'ya') {
+                disease = 'Feline Panleukopenia (FPV)';
+                solution = 'Penanganan intensif di dokter hewan, termasuk cairan infus dan obat antiviral. Isolasi kucing yang terinfeksi.';
+                prevention = 'Vaksinasi FPV dan jaga kebersihan lingkungan.';
+            } else if (symptoms.buang_air_kecil === 'ya' && symptoms.lesu === 'ya') {
+                disease = 'Penyakit Ginjal (Chronic Kidney Disease)';
+                solution = 'Diet rendah fosfor dan protein. Berikan obat atau cairan infus jika disarankan oleh dokter hewan.';
+                prevention = 'Berikan makanan berkualitas tinggi dan cukup air. Lakukan pemeriksaan rutin pada kucing dewasa.';
+            }
+
+            document.getElementById('disease').textContent = disease;
+            document.getElementById('solution').textContent = solution;
+            document.getElementById('prevention').textContent = prevention;
+            document.getElementById('result').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
